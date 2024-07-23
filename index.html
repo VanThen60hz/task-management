@@ -22,15 +22,41 @@
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css" />
     </head>
+
+    <style>
+        .container {
+            background: orange;
+            height: 50px;
+        }
+
+        .box {
+            background: blue;
+        }
+    </style>
+
     <body>
-        <header id="header"></header>
-        <script>
-            load("#header", "./template/header.html");
-        </script>
-        <h1>Hello world</h1>
-        <footer id="footer"></footer>
-        <script>
-            load("#footer", "./template/header.html");
-        </script>
+        <div class="container">
+            <header id="header"></header>
+            <script>
+                load("#header", "./template/header.html");
+            </script>
+
+            <div class="row row-cols-3">
+                <div class="col">
+                    <div class="box"></div>
+                </div>
+                <div class="col">
+                    <div class="box"></div>
+                </div>
+                <div class="col">
+                    <div class="box"></div>
+                </div>
+            </div>
+
+            <footer id="footer"></footer>
+            <script>
+                load("#footer", "./template/header.html");
+            </script>
+        </div>
     </body>
 </html>
