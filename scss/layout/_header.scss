@@ -1,4 +1,5 @@
 @use "../abstracts";
+
 .mobile {
     &__time {
         color: #9fa2a8;
@@ -45,6 +46,10 @@
 
     margin: 31px 18px 0;
 
+    @include abstracts.screen(md) {
+        margin-top: 22px;
+    }
+
     &__act {
         display: flex;
         align-items: center;
@@ -54,7 +59,7 @@
 
 .navbar {
     position: fixed;
-    inset: 0 30% 0 0;
+    inset: 0 40% 0 0;
     z-index: 9;
 
     padding: 20px 0;
@@ -63,6 +68,20 @@
 
     translate: -100%;
     transition: translate 0.5s;
+
+    @include abstracts.screen(md) {
+        position: initial;
+        inset: initial;
+
+        padding: 18px 0;
+
+        translate: 0;
+        background: transparent;
+    }
+
+    @include abstracts.screen(sm) {
+        inset: 0 60% 0 0;
+    }
 
     &__overlay {
         position: fixed;
@@ -74,7 +93,7 @@
         visibility: hidden;
         opacity: 0;
 
-        @include abstracts.screen(lg) {
+        @include abstracts.screen(md) {
             visibility: hidden;
             opacity: 0;
         }
@@ -93,18 +112,64 @@
     &__list {
         display: flex;
         flex-direction: column;
+
+        @include abstracts.screen(md) {
+            flex-direction: row;
+        }
     }
 
     &__link {
+        position: relative;
         display: flex;
         align-items: center;
 
         height: 44px;
         padding: 0 20px;
 
+        color: #d7d7d7;
+
         font-size: 1.6rem;
         font-style: normal;
         line-height: 1.5;
+
+        transition: height 0.3s, color 0.7s;
+
+        @include abstracts.screen(md) {
+            height: 24px;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: -3px;
+
+            content: "";
+
+            width: 25%;
+            height: 2px;
+            background: #6aea5c;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity, visibility;
+            transition-duration: 0.5s;
+        }
+
+        &--active,
+        &:hover {
+            height: 19px;
+
+            color: var(--active-color);
+
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__list:hover &__link:not(:hover) {
+        color: var(--text-color);
     }
 
     &__close-btn {

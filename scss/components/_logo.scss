@@ -1,3 +1,9 @@
+@use "../abstracts";
+
 .logo {
     height: 11px;
+
+    @include abstracts.screen(lg) {
+        height: 18px;
+    }
 }
