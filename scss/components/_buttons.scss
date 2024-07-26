@@ -7,15 +7,37 @@
     gap: 10px;
 
     height: 39px;
-    padding: 8px 20px;
-    border-radius: 6px;
+    padding: 12px 28px;
     border: 1px solid #36383e;
+    border-radius: 8px;
+
+    color: var(--button-color);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    @include abstracts.screen(md) {
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+
+    &--primary {
+        background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+    }
+
+    &--text {
+        background: #282c30;
+        box-shadow: 1px 8px 45px 0px rgba(0, 0, 0, 0.25);
+    }
 
     &--small {
         height: 30px;
+        border-radius: 6px;
     }
 
     &--signin {
+        padding: 9px 18px;
+
         font-size: 1.2rem;
 
         background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
@@ -30,5 +52,15 @@
 
             font-size: 1.6rem;
         }
+    }
+}
+
+.hero-act__btn {
+    width: 143px;
+    padding: initial;
+
+    @include abstracts.screen(md) {
+        width: 199px;
+        height: 54px;
     }
 }

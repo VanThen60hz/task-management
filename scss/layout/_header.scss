@@ -1,5 +1,14 @@
 @use "../abstracts";
 
+.header {
+    &__container {
+        @include abstracts.screen(xl) {
+            margin-top: 22px;
+            min-width: 1174px;
+        }
+    }
+}
+
 .mobile {
     &__time {
         color: #9fa2a8;
