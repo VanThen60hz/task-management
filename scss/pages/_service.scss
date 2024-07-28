@@ -14,7 +14,7 @@
         flex-direction: column;
         gap: 56px;
 
-        @include abstracts.screen(md) {
+        @include abstracts.screen(lg) {
             flex-direction: row;
             gap: 143px;
         }
@@ -57,7 +57,7 @@
             height: 1px;
             width: 100%;
 
-            @include abstracts.screen(md) {
+            @include abstracts.screen(lg) {
                 top: 31px;
                 left: calc(-50% + -31px + -28px);
             }

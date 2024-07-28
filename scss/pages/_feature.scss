@@ -1,0 +1,128 @@
+@use "../abstracts";
+
+.feature {
+    margin-top: 80px;
+    background: #191b1d;
+
+    @include abstracts.screen(lg) {
+        margin-top: 140px;
+    }
+
+    &__title {
+        color: #f9f9f9;
+        font-family: Sora;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__schedules {
+        position: relative;
+        padding: 75px 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            translate: -30% -50%;
+            width: 30%;
+            height: 30%;
+            background: linear-gradient(180deg, #6aea5c 0%, #fd7566 48.53%, #ef8f00 100%);
+            filter: blur(66px);
+        }
+    }
+}
+
+.schedules {
+    display: flex;
+    align-items: center;
+}
+
+.schedule {
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin: 0 20px;
+    }
+
+    &__line {
+        width: 1px;
+        height: 222px;
+        background: repeating-linear-gradient(
+            to bottom,
+            #fff,
+            #fff 10px,
+            transparent 10px,
+            transparent 20px
+        );
+    }
+
+    &__time {
+        padding: 20px 0;
+    }
+
+    &__bubble {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        padding: 7px 15px;
+        border-radius: 13px;
+        background: rgba(0, 0, 0, 0.32);
+
+        &:first-child {
+            top: 55px;
+            left: 12px;
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+            right: 20px;
+            translate: 0 -100%;
+            padding: 15px;
+        }
+
+        &:nth-child(3) {
+            top: 65%;
+            left: 0;
+            translate: 0 -100%;
+            padding: 15px;
+        }
+    }
+}
+
+.bubble {
+    position: absolute;
+    &__avatar {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #bdbdbd;
+        object-fit: cover;
+    }
+
+    &__highlight {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    &__highlight--one {
+        background: linear-gradient(91deg, #f08d08 1.27%, #b88ed3 78.9%);
+        background-clip: text;
+    }
+
+    &__highlight--second {
+        background: linear-gradient(90deg, #fd7566 1.48%, #6aea5c 101.48%);
+        background-clip: text;
+    }
+
+    &__highlight--third {
+        background: linear-gradient(90deg, #0cce84 -3.41%, #ff2eb8 103.89%);
+        background-clip: text;
+    }
+}

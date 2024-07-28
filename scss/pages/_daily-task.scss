@@ -1,0 +1,131 @@
+@use "../abstracts";
+
+.daily-task {
+    margin-top: 80px;
+
+    &__container {
+        @include abstracts.screen(xl) {
+            min-width: 1174px;
+        }
+
+        @include abstracts.screen(xxl) {
+            min-width: 1200px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: row;
+            align-items: center;
+            gap: 0;
+        }
+    }
+
+    @include abstracts.screen(lg) {
+        &__content {
+            width: 47%;
+        }
+
+        &__img-wrap {
+            width: 53%;
+        }
+    }
+
+    &__content-top {
+        width: 90%;
+
+        @include abstracts.screen(lg) {
+            width: auto;
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: normal;
+
+        @include abstracts.screen(lg) {
+            width: 368px;
+            font-size: 4rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 7px;
+
+        color: #9ea1a7;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.84;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.couns {
+    position: relative;
+    margin-top: 37px;
+    height: 139px;
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+}
+
+.coun {
+    position: relative;
+    width: 104px;
+    height: 98px;
+    padding: 15px 28px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #1c1f22;
+    text-align: center;
+
+    &:nth-child(2) {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+
+        width: 90px;
+        height: 86px;
+        border-radius: 9px;
+        background: linear-gradient(
+            192deg,
+            #c4f566 -43.72%,
+            #ae8ef9 -5.87%,
+            #ef8f00 52.36%,
+            #61e559 122.78%
+        );
+
+        color: #fff;
+    }
+
+    &__number {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__name {
+        margin-top: 10px;
+
+        color: inherit;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &-dots {
+        position: absolute;
+    }
+}

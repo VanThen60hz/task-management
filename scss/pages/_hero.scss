@@ -91,12 +91,6 @@
                     }
                 }
             }
-
-            color: transparent;
-            background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
     }
 
@@ -127,15 +121,23 @@
     }
 }
 
-.preview-img {
+.preview {
+    position: relative;
+    padding-top: 49.5%;
     margin-top: 82px;
-    width: 100%;
 
-    object-fit: cover;
+    &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
 
-    @include abstracts.screen(lg) {
-        display: block;
-        margin: 111px auto 0;
-        width: 90%;
+        width: 100%;
+        object-fit: cover;
+
+        @include abstracts.screen(lg) {
+            display: block;
+            margin: 111px auto 0;
+            width: 90%;
+        }
     }
 }

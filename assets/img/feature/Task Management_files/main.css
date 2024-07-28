@@ -1928,56 +1928,20 @@ html {
 .schedule__time {
   padding: 20px 0;
 }
-.schedule__bubble {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 7px 15px;
-  border-radius: 13px;
-  background: rgba(0, 0, 0, 0.32);
-}
 .schedule__bubble:first-child {
-  top: 55px;
-  left: 12px;
-}
-.schedule__bubble:nth-child(2) {
-  top: 50%;
-  right: 20px;
-  translate: 0 -100%;
-  padding: 15px;
-}
-.schedule__bubble:nth-child(3) {
-  top: 65%;
+  top: 0;
   left: 0;
-  translate: 0 -100%;
-  padding: 15px;
 }
 
-.bubble {
+.buddle {
   position: absolute;
 }
-.bubble__avatar {
+.buddle__avatar {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 1px solid #bdbdbd;
   object-fit: cover;
-}
-.bubble__highlight {
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-.bubble__highlight--one {
-  background: linear-gradient(91deg, #f08d08 1.27%, #b88ed3 78.9%);
-  background-clip: text;
-}
-.bubble__highlight--second {
-  background: linear-gradient(90deg, #fd7566 1.48%, #6aea5c 101.48%);
-  background-clip: text;
-}
-.bubble__highlight--third {
-  background: linear-gradient(90deg, #0cce84 -3.41%, #ff2eb8 103.89%);
-  background-clip: text;
 }
 
 .logo {
