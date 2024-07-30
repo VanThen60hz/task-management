@@ -9,19 +9,21 @@
         margin-top: 140px;
     }
 
-    &__title {
-        width: 75%;
-
-        color: #f9f9f9;
-        font-size: 3rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+    &__inner {
+        @include abstracts.screen(lg) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__schedules {
         position: relative;
         padding: 75px 0;
+
+        @include abstracts.screen(lg) {
+            width: 50%;
+        }
 
         &::before {
             content: "";
@@ -36,8 +38,26 @@
         }
     }
 
+    &__title {
+        width: 75%;
+
+        color: #f9f9f9;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
     &__list {
-        margin-top: 49px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 49px 0 0 20px;
+        gap: 34px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: auto auto;
+            gap: 23px 35px;
+        }
     }
 }
 
@@ -80,6 +100,7 @@
         padding: 15px;
         border-radius: 13px;
         background: rgba(0, 0, 0, 0.32);
+        line-height: normal;
 
         &:first-child {
             top: 55px;
@@ -88,7 +109,7 @@
 
         &:nth-child(2) {
             top: 50%;
-            right: 20px;
+            left: 210px;
             translate: 0 -100%;
         }
 
@@ -102,7 +123,7 @@
     &__bubble-message {
         position: absolute;
         top: 30%;
-        left: 39%;
+        left: 179px;
         display: flex;
         flex-direction: column;
         align-items: center;
