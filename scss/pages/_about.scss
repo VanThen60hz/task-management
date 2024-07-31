@@ -1,3 +1,38 @@
+@use "../abstracts";
+
 .about {
     margin-top: 80px;
+
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.34;
+
+        @include abstracts.screen(lg) {
+            width: 497px;
+            &--highlight {
+                background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+                background-clip: text;
+            }
+        }
+
+        &--highlight {
+            background: linear-gradient(180deg, #d1df2d 10.94%, #ff6f06 80.21%);
+            background-clip: text;
+        }
+    }
+
+    &__desc {
+        margin: 20px auto 0;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.63;
+
+        @include abstracts.screen(lg) {
+            width: 747px;
+            font-size: 1.6rem;
+        }
+    }
 }

@@ -1,0 +1,24 @@
+@use "../abstracts";
+
+.about-action {
+    &__list {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 26px;
+
+        @include abstracts.screen(lg) {
+            gap: 17px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 12px 20px;
+        border-radius: 23px;
+        background: #1d1f22;
+    }
+}
