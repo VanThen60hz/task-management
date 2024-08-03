@@ -36,12 +36,49 @@
                 }
             }
         }
+
+        &-daily-task02 {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            margin-top: 10px;
+            padding: 9px 18px 18px 12px;
+
+            &::after {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                content: url("../../assets/icons/dots.svg");
+                scale: 0.6;
+
+                @include abstracts.screen(lg) {
+                    scale: 1;
+                    top: 20px;
+                    right: 34px;
+                }
+            }
+
+            @include abstracts.screen(md) {
+                margin-top: 10px;
+                padding: 3px 6px 6px 4px;
+            }
+
+            @include abstracts.screen(lg) {
+                margin-top: 15px;
+                padding: 7px 12px 22px 8px;
+            }
+        }
     }
 }
 
 .dashboard-idea {
     position: relative;
-    padding: 30px 20px;
+    padding: 10px 7px;
+
+    @include abstracts.screen(md) {
+        padding: 30px 20px;
+    }
 
     @include abstracts.screen(lg) {
         padding: 59px 30px 55px;
@@ -327,6 +364,93 @@
             @include abstracts.screen(lg) {
                 font-size: 1.8rem;
             }
+        }
+    }
+
+    &__left {
+        width: 50%;
+        flex-shrink: 0;
+    }
+
+    &__right {
+        @include abstracts.screen(lg) {
+            margin-top: 42px;
+        }
+
+        &-title {
+            text-align: center;
+            translate: -15%;
+        }
+    }
+
+    &__symbol {
+        width: 100%;
+    }
+
+    &__chart {
+        width: 100%;
+    }
+
+    &__status-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        width: 90%;
+        margin-top: 10px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 40px;
+        }
+
+        &::after {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            translate: -50%;
+
+            content: "";
+            width: 20px;
+            height: 3px;
+            background: #0cce84;
+            border-radius: 100px;
+            opacity: 0;
+
+            @include abstracts.screen(md) {
+                opacity: 1;
+            }
+
+            @include abstracts.screen(lg) {
+                width: 30px;
+                height: 4px;
+            }
+        }
+    }
+
+    &__status-name {
+        color: #d0d1d2;
+        font-size: 0.8rem;
+        line-height: 1.57;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__user {
+        margin-top: 5px;
+        font-size: 0.8rem;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.4rem;
+        }
+
+        &--online {
+            color: #0cce84;
+        }
+        &--offline {
+            color: #ff7667;
         }
     }
 }
