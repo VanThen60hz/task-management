@@ -54,7 +54,7 @@
         margin: 49px 0 0 20px;
         gap: 34px;
 
-        @include abstracts.screen(lg) {
+        @include abstracts.screen(md) {
             grid-template-columns: auto auto;
             gap: 23px 35px;
         }
@@ -79,13 +79,7 @@
     &__line {
         width: 1px;
         height: 222px;
-        background: repeating-linear-gradient(
-            to bottom,
-            #fff,
-            #fff 10px,
-            transparent 10px,
-            transparent 20px
-        );
+        background: repeating-linear-gradient(to bottom, #fff, #fff 10px, transparent 10px, transparent 20px);
     }
 
     &__time {
