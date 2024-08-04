@@ -5,6 +5,8 @@
     grid-template-columns: 2fr 2fr 1fr;
     gap: 10px;
     margin-top: 75px;
+    overflow: hidden;
+    width: 100%;
 
     @include abstracts.screen(lg) {
         gap: 20px;
@@ -16,10 +18,10 @@
 
         &-daily-task01 {
             position: relative;
-            padding: 14px 18px 18px 11px;
+            padding: 21px 18px 27px 11px;
 
             @include abstracts.screen(lg) {
-                padding: 28px 78px 39px 47px;
+                padding: 28px 78px 26px 47px;
             }
 
             &::after {
@@ -41,9 +43,10 @@
             position: relative;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
 
             margin-top: 10px;
-            padding: 9px 18px 18px 12px;
+            padding: 18px 18px 21px 12px;
 
             &::after {
                 position: absolute;
@@ -59,6 +62,10 @@
                 }
             }
 
+            @include abstracts.screen(sm) {
+                flex-wrap: nowrap;
+            }
+
             @include abstracts.screen(md) {
                 margin-top: 10px;
                 padding: 3px 6px 6px 4px;
@@ -66,7 +73,7 @@
 
             @include abstracts.screen(lg) {
                 margin-top: 15px;
-                padding: 33px 12px 50px 8px;
+                padding: 24px 12px 28px 8px;
             }
         }
     }
@@ -81,6 +88,10 @@
     }
 
     @include abstracts.screen(lg) {
+        padding: 35px 30px 25px;
+    }
+
+    @include abstracts.screen(xl) {
         padding: 35px 30px 45px;
     }
 
@@ -99,7 +110,7 @@
     }
 
     &__title {
-        margin-top: 4px;
+        margin: 4px 0 0 5px;
         width: 70%;
         color: #fff;
         font-size: 1rem;
@@ -108,6 +119,7 @@
 
         @include abstracts.screen(lg) {
             font-size: 2.2rem;
+            margin-left: 0;
         }
     }
 
@@ -197,7 +209,7 @@
         transition: opacity 0.3s;
 
         @include abstracts.screen(lg) {
-            font-size: 1.2rem;
+            margin-left: 0;
         }
     }
 
@@ -244,6 +256,12 @@
     &__top {
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        @include abstracts.screen(md) {
+            gap: 0;
+        }
     }
 
     &-01-content {
@@ -457,13 +475,29 @@
 }
 
 .dashboard-team {
-    padding: 25px 33px 29px;
+    padding: 5px;
+
+    @include abstracts.screen(md) {
+        padding: 15px 17px 16px;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 20px 33px 20px;
+    }
 
     &__title {
         color: #fff;
-        font-size: 2.2rem;
+        font-size: 1.2rem;
         font-weight: 600;
         line-height: normal;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.6rem;
+        }
+
+        @include abstracts.screen(xl) {
+            font-size: 2.2rem;
+        }
 
         &--dot {
             display: inline-block;
@@ -475,7 +509,11 @@
     }
 
     &__list {
-        margin-top: 21px;
+        margin-top: 5px;
+
+        @include abstracts.screen(sm) {
+            margin-top: 15px;
+        }
     }
 
     &__item + &__item {
@@ -484,26 +522,49 @@
 
     &__item {
         display: flex;
-        align-items: center;
-        gap: 9px;
-        padding: 15px 0 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 5px 0 7px;
+
+        @include abstracts.screen(sm) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @include abstracts.screen(lg) {
+            gap: 9px;
+            padding: 11px 0 10px;
+        }
     }
 
     &__avatar-wrap {
         position: relative;
-        width: 34px;
-        height: 34px;
+        width: 16px;
+        height: 16px;
+
+        @include abstracts.screen(lg) {
+            width: 34px;
+            height: 34px;
+        }
 
         &::after {
             position: absolute;
             right: -1px;
-            bottom: 6px;
+            bottom: 2px;
             content: "";
-            width: 7px;
-            height: 7px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             background: #23d12a;
             border: 1px solid #6aea5c;
+
+            @include abstracts.screen(lg) {
+                right: -1px;
+                bottom: 6px;
+                width: 7px;
+                height: 7px;
+            }
         }
     }
 
@@ -516,12 +577,25 @@
 
     &__name {
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-weight: 400;
         line-height: normal;
+        flex-shrink: 0;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.2rem;
+        }
     }
 
     &__btn {
-        margin-top: 30px;
+        margin-top: 5px;
+
+        @include abstracts.screen(sm) {
+            margin-top: 15px;
+        }
+
+        @include abstracts.screen(xl) {
+            margin-top: 30px;
+        }
     }
 }
