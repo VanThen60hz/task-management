@@ -2067,6 +2067,119 @@ html {
   }
 }
 
+.explore {
+  margin-top: 46px;
+}
+.explore__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+@media (min-width: 992px) {
+  .explore__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 55px;
+  }
+}
+@media (min-width: 992px) {
+  .explore__content {
+    width: 50%;
+    flex-shrink: 0;
+  }
+}
+.explore__title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.explore__title--highlight {
+  background: linear-gradient(180deg, #d8dc2b 6.25%, rgba(255, 92, 0, 0.95) 82.81%);
+  background-clip: text;
+}
+@media (min-width: 992px) {
+  .explore__title--highlight {
+    background: linear-gradient(90deg, #eb9204 -88.14%, #83e868 116.38%);
+    background-clip: text;
+  }
+}
+@media (min-width: 992px) {
+  .explore__title {
+    font-size: 4rem;
+    line-height: 1.25;
+  }
+}
+.explore__list {
+  margin-top: 30px;
+}
+@media (min-width: 992px) {
+  .explore__list {
+    margin-top: 67px;
+  }
+}
+@media (min-width: 992px) {
+  .explore__images {
+    position: relative;
+    margin-top: 178px;
+    width: 50%;
+    height: 615px;
+  }
+}
+.explore__img {
+  width: 100%;
+  border-radius: 31px;
+  border: 3px solid transparent;
+  background-image: linear-gradient(90deg, #a7ef4c 33.33%, #ff5435 66.67%, #ef8f00 100%);
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  box-shadow: 0px 4px 89px 27px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+@media (min-width: 992px) {
+  .explore__img {
+    position: absolute;
+    z-index: 1;
+    width: 348px;
+    height: 263px;
+  }
+}
+@media (min-width: 992px) {
+  .explore__img-01 {
+    top: 0;
+    left: 0;
+  }
+  .explore__img-02 {
+    z-index: 2;
+    top: 160px;
+    right: 0;
+  }
+  .explore__img-03 {
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+  }
+}
+.explore__img + .explore__img {
+  margin-top: 27px;
+}
+@media (min-width: 992px) {
+  .explore__img + .explore__img {
+    margin-top: 0;
+  }
+}
+.explore__cta {
+  margin: -10px auto 0;
+}
+@media (min-width: 992px) {
+  .explore__cta {
+    position: absolute;
+    top: 27px;
+    right: 98px;
+    margin: initial;
+  }
+}
+
 .logo {
   height: 11px;
 }
@@ -2104,8 +2217,14 @@ html {
   background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
 }
 .btn--text {
-  background: #282c30;
+  background: transparent;
   box-shadow: 1px 8px 45px 0px rgba(0, 0, 0, 0.25);
+}
+.btn--highlight {
+  background: linear-gradient(90deg, #ef8f00 4.66%, #6aea5c 97.03%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .btn--small {
   height: 30px;
@@ -2154,6 +2273,24 @@ html {
   .hero-act__btn {
     width: 199px;
     height: 54px;
+  }
+}
+
+.explore__cta-btn {
+  width: 135px;
+  height: 42px;
+  border: 2px solid #36383e;
+  border-radius: 9px;
+  font-size: 1.2rem;
+  font-family: Sora;
+}
+@media (min-width: 768px) {
+  .explore__cta-btn {
+    width: 220px;
+    height: 68px;
+    padding: 25px 50px;
+    font-size: 1.8rem;
+    border-radius: 12px;
   }
 }
 
@@ -2840,6 +2977,66 @@ html {
 @media (min-width: 1200px) {
   .dashboard-team__btn {
     margin-top: 30px;
+  }
+}
+
+.explore-item {
+  padding: 18px 49px 8px 26px;
+  border-radius: 15px;
+  border: 2px solid #282b2e;
+}
+@media (min-width: 992px) {
+  .explore-item {
+    padding: 23px 65px 37px 40px;
+  }
+}
+.explore-item__title {
+  position: relative;
+  display: inline;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.explore-item__title::after {
+  position: absolute;
+  right: -9px;
+  bottom: 5px;
+  content: "";
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+@media (min-width: 992px) {
+  .explore-item__title {
+    font-size: 2.8rem;
+  }
+}
+.explore-item__title-01::after {
+  background-color: #ef8f00;
+}
+.explore-item__title-02::after {
+  background-color: #6aea5c;
+}
+.explore-item__title-03::after {
+  background-color: #fd7566;
+}
+.explore-item__desc {
+  margin-top: 5px;
+  font-size: 1rem;
+  line-height: 2.2;
+}
+@media (min-width: 992px) {
+  .explore-item__desc {
+    margin-top: 9px;
+    font-size: 1.6rem;
+  }
+}
+
+.explore-item + .explore-item {
+  margin-top: 10px;
+}
+@media (min-width: 992px) {
+  .explore-item + .explore-item {
+    margin-top: 22px;
   }
 }
 

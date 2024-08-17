@@ -1,0 +1,119 @@
+@use "../abstracts";
+
+.explore {
+    margin-top: 46px;
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: row;
+            align-items: center;
+            gap: 55px;
+        }
+    }
+
+    &__content {
+        @include abstracts.screen(lg) {
+            width: 50%;
+            flex-shrink: 0;
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.33;
+
+        &--highlight {
+            background: linear-gradient(180deg, #d8dc2b 6.25%, rgba(255, 92, 0, 0.95) 82.81%);
+            background-clip: text;
+
+            @include abstracts.screen(lg) {
+                background: linear-gradient(90deg, #eb9204 -88.14%, #83e868 116.38%);
+                background-clip: text;
+            }
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 4rem;
+            line-height: 1.25;
+        }
+    }
+
+    &__list {
+        margin-top: 30px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 67px;
+        }
+    }
+
+    &__images {
+        @include abstracts.screen(lg) {
+            position: relative;
+            margin-top: 178px;
+            width: 50%;
+            height: 615px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 31px;
+        border: 3px solid transparent;
+        background-image: linear-gradient(90deg, #a7ef4c 33.33%, #ff5435 66.67%, #ef8f00 100%);
+        background-clip: border-box;
+        -webkit-background-clip: border-box;
+        box-shadow: 0px 4px 89px 27px rgba(0, 0, 0, 0.4);
+        object-fit: cover;
+
+        @include abstracts.screen(lg) {
+            position: absolute;
+            z-index: 1;
+            width: 348px;
+            height: 263px;
+        }
+    }
+    @include abstracts.screen(lg) {
+        &__img-01 {
+            top: 0;
+            left: 0;
+        }
+
+        &__img-02 {
+            z-index: 2;
+            top: 160px;
+            right: 0;
+        }
+
+        &__img-03 {
+            z-index: 3;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__img + &__img {
+        margin-top: 27px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 0;
+        }
+    }
+
+    &__cta {
+        margin: -10px auto 0;
+
+        @include abstracts.screen(lg) {
+            position: absolute;
+            top: 27px;
+            right: 98px;
+
+            margin: initial;
+        }
+    }
+}

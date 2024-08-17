@@ -30,8 +30,15 @@
     }
 
     &--text {
-        background: #282c30;
+        background: transparent;
         box-shadow: 1px 8px 45px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &--highlight {
+        background: linear-gradient(90deg, #ef8f00 4.66%, #6aea5c 97.03%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &--small {
@@ -86,5 +93,22 @@
     @include abstracts.screen(md) {
         width: 199px;
         height: 54px;
+    }
+}
+
+.explore__cta-btn {
+    width: 135px;
+    height: 42px;
+    border: 2px solid #36383e;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    font-family: Sora;
+
+    @include abstracts.screen(md) {
+        width: 220px;
+        height: 68px;
+        padding: 25px 50px;
+        font-size: 1.8rem;
+        border-radius: 12px;
     }
 }
