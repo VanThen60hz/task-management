@@ -4,7 +4,7 @@
     &__container {
         @include abstracts.screen(xl) {
             margin-top: 22px;
-            min-width: 1px;
+            min-width: 1174px;
         }
     }
 }
@@ -78,7 +78,7 @@
     translate: -100%;
     transition: translate 0.5s;
 
-    @include abstracts.screen(md) {
+    @include abstracts.screen(lg) {
         position: initial;
         inset: initial;
 

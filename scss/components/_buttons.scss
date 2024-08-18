@@ -5,40 +5,41 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     height: 39px;
     padding: 12px;
     border: 1px solid #36383e;
     border-radius: 8px;
-
     color: var(--button-color);
-
     font-size: 1.2rem;
     font-weight: 600;
 
     @include abstracts.screen(md) {
         padding: 12px 28px;
-    }
-
-    @include abstracts.screen(md) {
         font-size: 1.6rem;
         font-weight: normal;
     }
 
-    &--primary {
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &--primary,
+    &--signin {
         background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+    }
+
+    &--highlight,
+    &--signin {
+        color: transparent;
+        background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &--text {
         background: transparent;
         box-shadow: 1px 8px 45px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    &--highlight {
-        background: linear-gradient(90deg, #ef8f00 4.66%, #6aea5c 97.03%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     &--small {
@@ -48,19 +49,12 @@
 
     &--signin {
         padding: 9px 18px;
-
         font-size: 1.2rem;
-
-        background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
 
         @include abstracts.screen(lg) {
             width: 110px;
             height: 40px;
             border-radius: 8px;
-
             font-size: 1.6rem;
         }
     }
@@ -70,7 +64,6 @@
         height: 17px;
         border-radius: 7px;
         background: #ef8f00;
-
         color: #fff;
         font-family: Sora;
         font-size: 0.8rem;
@@ -80,7 +73,6 @@
         @include abstracts.screen(lg) {
             width: 129px;
             height: 37px;
-
             font-size: 1.2rem;
         }
     }

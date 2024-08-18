@@ -7,6 +7,13 @@
         margin-top: 140px;
     }
 
+    &__container {
+        @include abstracts.screen(xxl) {
+            margin-top: 22px;
+            min-width: 1249px;
+        }
+    }
+
     &__title {
         color: #fff;
         font-size: 3rem;

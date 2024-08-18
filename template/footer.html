@@ -1,3 +1,246 @@
-<div class="footer__inner">
-    <h2>Footer</h2>
+<div class="container">
+    <div class="footer__inner">
+        <div class="footer__top">
+            <img
+                src="./assets/img/logo.png"
+                alt=""
+                class="logo footer__logo footer__top-logo d-none d-lg-block"
+            />
+            <div class="footer__cta-group">
+                <p class="footer__text">Ready to get started?</p>
+                <button class="btn btn--primary footer__btn">Get Started</button>
+            </div>
+        </div>
+
+        <div class="separate d-none d-md-block"></div>
+
+        <div class="footer__bottom">
+            <img src="./assets/logo.png" alt="" class="logo footer__logo d-lg-none" />
+            <div class="footer__contact">
+                <label class="footer__label d-none d-lg-block">Subscribe to our newsletter</label>
+                <form action="#!" class="form subscribe-form footer__form">
+                    <div class="form__group">
+                        <div class="form__text-input">
+                            <input
+                                type="email"
+                                name=""
+                                placeholder="Your email address"
+                                class="form__input"
+                                autofocus=""
+                                required=""
+                            />
+                            <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                            <img
+                                src="./assets/icons/form-error.svg"
+                                alt=""
+                                class="form__input-icon-error"
+                            />
+                        </div>
+                        <p class="form__error">Email is not valid</p>
+                    </div>
+                    <button class="btn btn--submit subscribe-form__submit">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="23"
+                            height="23"
+                            viewBox="0 0 23 23"
+                            fill="none"
+                        >
+                            <circle
+                                cx="11.4333"
+                                cy="11.5663"
+                                r="10.645"
+                                fill="url(#paint0_linear_43_1179)"
+                            />
+                            <path
+                                d="M10.3127 8.20459L13.3942 11.286L10.3127 14.3675"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <defs>
+                                <linearGradient
+                                    id="paint0_linear_43_1179"
+                                    x1="-15.1791"
+                                    y1="-0.199134"
+                                    x2="11.4333"
+                                    y2="22.2113"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset="0.426875" stop-color="#355D17" />
+                                    <stop offset="1" stop-color="#C38C08" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="footer__socials d-none d-lg-flex">
+                    <a href="#!" class="footer__social-link">
+                        <img
+                            src="./assets/icons/facebook.svg"
+                            alt="image alt"
+                            class="icon footer__social-icon"
+                        />
+                    </a>
+                    <a href="#!" class="footer__social-link">
+                        <img
+                            src="./assets/icons/twitter.svg"
+                            alt="image alt"
+                            class="icon footer__social-icon"
+                        />
+                    </a>
+                    <a href="#!" class="footer__social-link">
+                        <img
+                            src="./assets/icons/instagram.svg"
+                            alt="image alt"
+                            class="icon footer__social-icon"
+                        />
+                    </a>
+                </div>
+            </div>
+            <button class="footer-navbar__more d-lg-none js-toggle" toggle-target="#footer-navbar">
+                <img
+                    src="./assets/icons/more.svg"
+                    alt=""
+                    class="icon footer-navbar__more-icon js-toggle"
+                    toggle-target="#footer-navbar"
+                />
+            </button>
+
+            <nav id="footer-navbar" class="navbar footer-navbar hide">
+                <button
+                    class="navbar__close-btn d-md-none js-toggle"
+                    toggle-target="#footer-navbar"
+                >
+                    <img
+                        src="./assets/icons/go-back-arrow.svg"
+                        alt="image alt"
+                        class="icon go-back-arrow"
+                    />
+                </button>
+                <ul class="navbar__list footer-navbar__list js-menu-list">
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link footer-navbar__link">
+                            Services
+
+                            <img
+                                src="./assets/icons/arrow-down.svg"
+                                alt="image alt"
+                                class="icon navbar__arrow d-lg-none"
+                            />
+                        </a>
+
+                        <div class="sub-menu">
+                            <ul class="sub-menu__list">
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Email Marketing</a
+                                    >
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Campaigns</a
+                                    >
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Branding</a
+                                    >
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Online</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link footer-navbar__link">
+                            About
+
+                            <img
+                                src="./assets/icons/arrow-down.svg"
+                                alt="image alt"
+                                class="icon navbar__arrow d-lg-none"
+                            />
+                        </a>
+
+                        <div class="sub-menu">
+                            <ul class="sub-menu__list">
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Our Story</a
+                                    >
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Benefits</a
+                                    >
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Team</a
+                                    >
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Careers</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link footer-navbar__link">
+                            Help
+
+                            <img
+                                src="./assets/icons/arrow-down.svg"
+                                alt="image alt"
+                                class="icon navbar__arrow d-lg-none"
+                            />
+                        </a>
+
+                        <div class="sub-menu">
+                            <ul class="sub-menu__list">
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >FAQs</a
+                                    >
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a
+                                        href="#!"
+                                        class="sub-menu__link navbar__link footer-navbar__link"
+                                        >Contact Us</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </div>
