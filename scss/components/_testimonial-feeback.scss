@@ -1,0 +1,100 @@
+@use "../abstracts";
+
+.testimonial-feedback {
+    display: flex;
+    flex-direction: column;
+
+    @include abstracts.screen(lg) {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    &__list {
+        width: 100%;
+        margin-top: 25px;
+        display: flex;
+        overflow: hidden;
+
+        &:hover .testimonial-feedback__item:not(:hover) {
+            background: #131517;
+        }
+
+        @include abstracts.screen(lg) {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+    }
+
+    &__item:hover &__comma {
+        filter: brightness(0) saturate(100%) invert(69%) sepia(30%) saturate(2565%)
+            hue-rotate(105deg) brightness(91%) contrast(91%);
+        rotate: 180deg;
+    }
+
+    &__item {
+        flex-shrink: 0;
+        width: 100%;
+        padding: 24px 33px;
+        border-radius: 10px;
+        border: 1px solid #2d2f31;
+        background: #282b2e;
+
+        transition: background-color 0.3s;
+    }
+
+    &__comma {
+        display: block;
+        margin-left: auto;
+        margin-right: 33px;
+
+        transition-property: filter, rotate;
+        transition-duration: 0.3s;
+    }
+
+    &__quote {
+        margin-top: 22px;
+        color: #b1b1b1;
+        font-size: 1.5rem;
+        line-height: 1.87;
+
+        @include abstracts.screen(lg) {
+            margin-top: 26px;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__avatar {
+        margin-right: 16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    &__info {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include abstracts.screen(lg) {
+            margin-top: 29px;
+        }
+    }
+
+    &__user-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__name {
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+
+    &__position {
+        color: #858b93;
+        font-size: 1rem;
+    }
+}

@@ -19,6 +19,20 @@ $display-values: block, flex, grid, none;
 
 @include make-display();
 
+@mixin section-separate($breakpoints) {
+    @each $breakpoint, $dimension in $breakpoints {
+        @media (min-width: $dimension) {
+            width: calc(75 * #{$dimension / 100});
+            @debug $dimension;
+        }
+    }
+}
+
+.section-separate {
+    margin: 0 auto;
+    @include section-separate($breakpoints);
+}
+
 @each $breakpoint, $dimension in $breakpoints {
     @media (min-width: $dimension) {
         @include make-display($breakpoint);

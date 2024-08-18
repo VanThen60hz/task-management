@@ -4,9 +4,15 @@
     padding: 18px 49px 8px 26px;
     border-radius: 15px;
     border: 2px solid #282b2e;
+    cursor: pointer;
+    transition: background-color 0.7s;
 
     @include abstracts.screen(lg) {
-        padding: 23px 65px 37px 40px;
+        padding: 29px 65px 37px 40px;
+    }
+
+    &:hover {
+        background: #282b2e;
     }
 
     &__title {
@@ -23,6 +29,13 @@
             height: 5px;
             width: 5px;
             border-radius: 50%;
+
+            @include abstracts.screen(lg) {
+                width: 8px;
+                height: 8px;
+                right: -14px;
+                bottom: 8px;
+            }
         }
 
         @include abstracts.screen(lg) {

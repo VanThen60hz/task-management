@@ -144,7 +144,9 @@ strong {
     height: 6px;
     background: #272633;
     border-radius: 50%;
+    cursor: pointer;
 
+    &:hover,
     &--active {
         background: linear-gradient(
             192deg,
@@ -157,5 +159,7 @@ strong {
 }
 
 .dots {
+    display: flex;
     gap: 3px;
+    cursor: pointer;
 }

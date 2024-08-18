@@ -1,0 +1,57 @@
+@use "../abstracts";
+
+.testimonial {
+    margin-top: 80px;
+
+    @include abstracts.screen(lg) {
+        margin-top: 140px;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.33;
+        text-align: center;
+
+        &--highlight {
+            color: #f8d100;
+        }
+    }
+
+    &__controls {
+        margin-top: 12px;
+        margin-right: 23px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 0;
+        }
+    }
+
+    &__control {
+        padding: 5px;
+        cursor: pointer;
+        .arrow-path {
+            stroke: #303337;
+            transition: stroke 0.3s;
+
+            &:hover {
+                stroke: #fd7566;
+            }
+        }
+
+        &:hover .arrow-path {
+            stroke: #fd7566;
+        }
+    }
+
+    &__dots {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+}

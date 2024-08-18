@@ -1,7 +1,11 @@
 @use "../abstracts";
 
 .explore {
-    margin-top: 46px;
+    margin: 46px 0 49px;
+
+    @include abstracts.screen(lg) {
+        margin: 140px 0 70px;
+    }
 
     &__inner {
         position: relative;
@@ -53,6 +57,8 @@
     }
 
     &__images {
+        width: 90%;
+        margin: 0 auto;
         @include abstracts.screen(lg) {
             position: relative;
             margin-top: 178px;
