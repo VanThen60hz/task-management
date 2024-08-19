@@ -137,10 +137,12 @@
 
     &__link {
         font-size: 1.2rem;
+        white-space: nowrap;
     }
 
     @include abstracts.screen(lg) {
         margin-top: 22px;
+
         margin-left: 0;
 
         opacity: 1;
@@ -168,6 +170,6 @@
 
 .sub-menu__item + .sub-menu__item {
     @include abstracts.screen(lg) {
-        margin-top: 10px;
+        margin-top: 15px;
     }
 }

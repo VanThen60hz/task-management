@@ -51,6 +51,7 @@ $error-color: #ed4337;
     &__text-input {
         position: relative;
         height: 46px;
+        margin-right: 23px;
 
         &--small {
             height: 42px;
@@ -72,10 +73,6 @@ $error-color: #ed4337;
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 1.83;
-
-        @include abstracts.screen(sm) {
-            font-size: 1.2rem;
-        }
 
         &::placeholder {
             color: var(--form-placeholder-color);

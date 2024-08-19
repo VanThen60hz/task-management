@@ -39,8 +39,15 @@
     }
 
     &__control {
-        padding: 5px;
+        padding: 10px;
+        scale: 2;
         cursor: pointer;
+
+        @include abstracts.screen(lg) {
+            padding: 5px;
+            scale: 1.5;
+        }
+
         .arrow-path {
             stroke: #303337;
             transition: stroke 0.3s;

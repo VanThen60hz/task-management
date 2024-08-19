@@ -273,11 +273,17 @@ strong {
 }
 
 .dot {
-  width: 6px;
-  height: 6px;
+  width: 12px;
+  height: 12px;
   background: #272633;
   border-radius: 50%;
   cursor: pointer;
+}
+@media (min-width: 992px) {
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
 }
 .dot:hover, .dot--active {
   background: linear-gradient(192deg, #c4f566 -43.72%, #ae8ef9 -5.87%, #ef8f00 52.36%, #61e559 122.78%);
@@ -285,7 +291,7 @@ strong {
 
 .dots {
   display: flex;
-  gap: 3px;
+  gap: 5px;
   cursor: pointer;
 }
 
@@ -1718,6 +1724,7 @@ html {
 }
 .footer .sub-menu__link {
   font-size: 1.2rem;
+  white-space: nowrap;
 }
 @media (min-width: 992px) {
   .footer .sub-menu {
@@ -1746,7 +1753,7 @@ html {
 
 @media (min-width: 992px) {
   .sub-menu__item + .sub-menu__item {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 }
 
@@ -2455,8 +2462,15 @@ html {
   }
 }
 .testimonial__control {
-  padding: 5px;
+  padding: 10px;
+  scale: 2;
   cursor: pointer;
+}
+@media (min-width: 992px) {
+  .testimonial__control {
+    padding: 5px;
+    scale: 1.5;
+  }
 }
 .testimonial__control .arrow-path {
   stroke: #303337;
@@ -3560,6 +3574,7 @@ html {
 .form__text-input {
   position: relative;
   height: 46px;
+  margin-right: 23px;
 }
 .form__text-input--small {
   height: 42px;
@@ -3576,11 +3591,6 @@ html {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.83;
-}
-@media (min-width: 576px) {
-  .form__input {
-    font-size: 1.2rem;
-  }
 }
 .form__input::placeholder {
   color: var(--form-placeholder-color);

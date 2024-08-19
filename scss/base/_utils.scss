@@ -23,7 +23,6 @@ $display-values: block, flex, grid, none;
     @each $breakpoint, $dimension in $breakpoints {
         @media (min-width: $dimension) {
             width: calc(75 * #{$dimension / 100});
-            @debug $dimension;
         }
     }
 }
