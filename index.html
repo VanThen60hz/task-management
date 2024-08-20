@@ -974,6 +974,26 @@
                     }
                 });
             });
+
+            document.querySelectorAll(".navbar__link").forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        const offset =
+                            targetElement.getBoundingClientRect().top +
+                            window.pageYOffset -
+                            window.innerHeight / 2 +
+                            targetElement.offsetHeight / 2;
+                        window.scrollTo({
+                            top: offset,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
         </script>
     </body>
 </html>

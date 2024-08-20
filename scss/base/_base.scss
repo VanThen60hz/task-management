@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -16,6 +21,7 @@ body {
     font-family: "Sora", sans-serif;
     background: var(--body-bg);
     color: var(--text-color);
+    scroll-snap-type: y mandatory;
 }
 
 h1,
